@@ -40,7 +40,6 @@ int main(int argc, char *argv[]){
                         break;
                     }
                     else {
-                        fprintf(stderr, "Add operation\n", token);
                         push(calculator[(int)token[0]](pop(), pop()));
                     }
                 }
