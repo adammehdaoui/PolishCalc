@@ -12,6 +12,8 @@ int main(int argc, char *argv[]){
     char del[] = " ";
     char *token;
     BinaryOperation* calculator = enregistreBin();
+    UnaryOperation* unaryCalculator = enregistreUna();
+    int valid = 0;
 
     value = readline(">>> ");
     add_history(value);
@@ -36,8 +38,8 @@ int main(int argc, char *argv[]){
                     push(atoi(token));
                 }
                 else {
-                    if(size() < 2){
-                        break;
+                    if(token[0] == '!'){
+                        push(unaryCalculator[token[0]](pop()));
                     }
                     else {
                         push(calculator[(int)token[0]](pop(), pop()));

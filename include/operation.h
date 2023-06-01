@@ -4,5 +4,6 @@ typedef int (*BinaryOperation)(int, int);
 typedef int (*UnaryOperation)(int);
 
 BinaryOperation* enregistreBin();
+UnaryOperation* enregistreUna();
 
 #endif

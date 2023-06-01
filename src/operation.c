@@ -48,3 +48,9 @@ BinaryOperation* enregistreBin(){
     calculator['^'] = puissance;
     return calculator;
 }
+
+UnaryOperation* enregistreUna(){
+    UnaryOperation* calculator = malloc(sizeof(UnaryOperation)*4096);
+    calculator['!'] = factorielle;
+    return calculator;
+}
